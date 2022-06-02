@@ -6,7 +6,7 @@ const bodyParser=require('body-parser')
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.json())
 app.use(cors({origin:'*'}))
-
+const port = process.env.PORT || 5000
 const URL='mongodb+srv://JayFab200:o8o88379502@cluster0.qtfme.mongodb.net/quiz_project?retryWrites=true&w=majority';
 
 mongoose.connect(URL,(err)=>{
@@ -64,7 +64,7 @@ const settingModel=mongoose.model('settings',settingSchema)
 
 app.get('/', (req,res)=>{
     res.send('BACKEND WORKING')
-    console.log('BACKEND IS GOOD')
+    //console.log('BACKEND IS GOOD')
 } )
 
 app.post('/registerStudent', (req,res)=>{
@@ -230,6 +230,6 @@ else{
 })} )
 
 
-app.listen(5000,()=>{
+app.listen(port,()=>{
 	console.log('running on port 5000');
 })
