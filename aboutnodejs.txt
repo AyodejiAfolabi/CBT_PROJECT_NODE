@@ -1,0 +1,16 @@
+express is a nodejs framework
+
+
+* how to run node
+
+node 'name of file';
+
+e.g
+node index.js
+
+* send keyword serve like return
+it wont execute a block of code after it
+* you'll nees to install 'nodemon' to make ur work faster(auto-refreshing).
+
+*ejs
+embedded javascript
